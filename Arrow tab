@@ -1,0 +1,28 @@
+angular.module('arrowtabDemo',[]).directive('arrowtabs', function (){
+/* Arrowtabs html...don't remove this comment.
+  <div class='tabs finish'><span class="tabtext">Plan </span> </div>
+   <div class='tabs middle unfinish'><span class="tabtext"> Shipping </span></div>
+   <div class='tabs middle unfinish'><span class="tabtext"> Billing</span></div> 
+   <div class='tabs last unfinish'><span class="tabtext"> Review</span></div>
+*/
+	return {	
+			restrict : "E",
+			link: function(scope, element, attrs)
+			{
+				var tabhtml ="";
+				attrs.select = (((attrs.select=='' || attrs.select=='0'|| attrs.select==null) ? "1"
+					:((attrs.select=="all")? "1,2,3,4" : attrs.select)));
+	            var tabcontent = element.text().split("|");
+	            var selindex = attrs.select.split(",");
+	            for(var i =0 ; i<tabcontent.length; i++)
+	            {
+	            	tabhtml += " <div class='" 
+	            			+ ((i ==tabcontent.length-1) ? "last " :"tabs ") 
+	            			+ ((i>0 && i !=tabcontent.length-1) ? " middle " :"")
+	            			+ ((i+1)==selindex[i]? "finish " : "unfinish ") 
+	            			+"'><span class='tabtext'> " + tabcontent[i] + "</span> </div>" ;
+	            }			
+				element.html(tabhtml);
+			}
+		} 
+});
