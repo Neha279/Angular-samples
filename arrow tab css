@@ -1,3 +1,7 @@
+.wd100 {width: 100%;} 
+.cls {clear:both;}
+.overhide {overflow: hidden;}
+
 .tabs, .last {
 	float: left;
 position: relative;
