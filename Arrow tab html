@@ -1,3 +1,9 @@
+/*for first tab selection*/
 <div class="cls wd100 overhide"> 
 	<arrowtabs select="1"> Tab1 | Tab2 | Tab3 | Tab4 </arrowtabs>
  </div>
+ 
+ /*foro multi selection */
+ <div class="cls wd100 overhide"> 
+	 <arrowtabs select="1,2,3"> Tab1 | Tab2 | Tab3 | Tab4 </arrowtabs> 
+</div>
