@@ -1,0 +1,59 @@
+.tabs, .last {
+	float: left;
+position: relative;
+height: 33px;
+width: 22%;
+border: solid 2px #0096D6;
+border-right: none;
+/*background: #eee linear-gradient(white, #FFFFFF 37%, #FFFFFF 57%, #FFFFFF);*/
+cursor: pointer;
+margin: 1%;
+font-size: 12px;
+font-weight: bold;
+padding-top: 15px;
+vertical-align: middle;
+}
+
+.last {border-right:2px solid #0096D6;}
+.tabtext  {
+	z-index: 200;
+	position: relative;
+	margin:  35%;
+}
+.tabs:after , .middle:after{
+	position: absolute;
+top: 9px;
+right: -15px;
+/*width: 47%;
+height: 30px;*/
+width: 28px;
+height: 28px;
+border-left: solid 2px #0096D6;
+border-top: solid 2px #0096D6;
+transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+-webkit-transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+content: '';
+z-index: 100;
+}
+
+.middle:before, .last:before {
+position: absolute;
+top: 9px;
+left: -16px;
+/*left: -27%;
+width: 47%;
+height: 29px;
+*/
+width: 29px;
+height: 29px;
+border-left: solid 2px #0096D6;
+border-top: solid 2px #0096D6;
+transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+-webkit-transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+content: '';
+}
+
+.finish, .finish:after {color:#FFFFFF;  background:#0096D6;  outline:none;}
+/*.finish:after {background: red;}*/
+.finish:before { background: #FFFFFF; outline: none; border: none;}
+.unfinish, .unfinish:after, .unfinish:before  { color:#0096D6; background: #FFFFFF;}
